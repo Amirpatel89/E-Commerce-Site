@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class NavBar extends Component{
 	constructor(){
 		super();
 	}
+	componentWillReceiveProps(newProps){
+		if(newProps.auth.name !== undefined){
+
+		}
+	}
+
+
 	render(){
+		if(this.auth.name !== undefined){
+			var rightMenuBar = [
+			<li className="">Welcome, {this.props.auth.name}</li>
+
+			]
+		}
+		console.log(this.props.auth)
 		return(
 			<div id="navbar">
 				<nav className="navbar navbar-fixed-top">
@@ -35,5 +50,13 @@ class NavBar extends Component{
 		)
 	}
 }
+function mapDispatchToProps(dispatch){
+	// dispatch is teh thing that takes any action
+	// and sends it out to all teh reducers	
+	return bindActionCreators({
+		authAction: AuthAction
+	})
+}
 
+export default connect(mapStateToProps)(NavBar)
 export default NavBar;
