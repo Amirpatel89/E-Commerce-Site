@@ -11,6 +11,60 @@ var bcrypt = require('bcrypt-nodejs');
 var randToken = require('rand-token');
 // console.log(randToken.uid(100));
 
+router.post('/login', (req, res, next)=>{
+	console.log(req.body);
+	const email = req.body.email;
+	const password = req.body.password;
+
+	const checkLoginQuery = `SELECT * FROM users 
+		INNER JOIN customers ON users.cid = customers.customerNumber
+		WHERE users.email = ?`;
+	connection.query(checkLoginQuery, [email], (error, results)=>{
+		if(error){
+			throw error; //dev only
+		}
+		if(results.length === 0){
+			// this user does not exist. Goodbye.
+			res.json({
+				msg: 'badUser'
+			})
+		}else{
+			// this email is valid, see if the password is...
+			// password is the english they gave us on the form
+			// results[0].password is what we have for this user in the DB
+			const checkHash = bcrypt.compareSync(password, results[0].password)
+			const name = results[0].customerName;
+			if(checkHash){
+				// these are the droids we're looking for.
+				// create a new token.
+				// update their row in teh DB with the token
+				// send some json back to react/ajax/axios
+				const newToken = randToken.uid(100);
+				const updateToken = `UPDATE users SET token = ?
+					WHERE email = ?`
+				connection.query(updateToken,[newToken, email],(error)=>{
+					if(error){
+						throw error;
+					}else{
+						res.json({
+							msg: "loginSuccess",
+							token: newToken,
+							name: name
+						});						
+					}
+				})
+			}else{
+				// you dont want to sell me deathsticks. You want to go home
+				// and rethink your life.
+				res.json({
+					msg: "wrongPassword"
+				}) 
+			}
+		}
+	})
+
+	// res.json(req.body);
+});
 
 router.post('/register', (req,res,next)=>{
 	console.log(req.body);
