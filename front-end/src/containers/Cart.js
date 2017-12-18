@@ -1,21 +1,40 @@
-import React, { Component } from 'react'
-import { Form, FormGroup, ControlLabel, FormControl, Button, Col ,MenuItem} from 'react-bootstrap'
-// this is a container that knows abotu redux so...
-import {connect} from 'react-redux';
-// we need bindActionCreators because we have redux actions that will dispatch
-import {bindActionCreators} from 'redux';
-
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import GetCart from '../actions/GetCart';
 
 class Cart extends Component{
-	constructor(){
 
-	}
-	render(){
-		if(this.props.auth.name !== undefined){
-			// the user is logged in
-			
+	componentDidMount(){
+		console.log(this.props.auth);
+		if(this.props.auth.token === undefined){
+			// if the user has no token... they should not be here. Goodbye.
+			// this.props.history.push('/login')
 		}else{
-
+			// the user does have a token, go get their cart!
+			this.props.getCart(this.props.auth.token);
 		}
 	}
+
+	render(){
+		console.log(this.props.cart);
+		return(
+			<h1>Cart Page</h1>
+		)
+	}
 }
+
+function mapStateToProps(state){
+	return{
+		auth: state.auth,
+		cart: state.cart
+	}
+}
+
+function mapDispatchToProps(dispatch){
+	return bindActionCreators({
+		getCart: GetCart
+	},dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Cart);

@@ -1,14 +1,15 @@
-// A reducer is a FUNCTION that returns a peice of state
-
 export default function(state = [], action){
-	if(action.type === 'AUTH_ACTION'){
-		// var newState = {...state};
-		// I'm going to update. I care about this action.
-		return action.payload.data;
-	}else{
-		// I dont care about this action. I'm going to return what I already had.
-		return state;
+	switch(action.type){
+		case 'UPDATE_CART':
+		case 'GET_CART':
+			return action.payload.data;
+		default:
+			return state;
 	}
-	console.log(action);
-	
+	// if((action.type === 'UPDATE_CART') || (action.type === 'GET_CART')){
+	// 	// var newState = {...state};
+	// 	return action.payload.data;
+	// }else{
+	// 	return state;
+	// }
 }

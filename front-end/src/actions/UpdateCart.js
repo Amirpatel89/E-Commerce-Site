@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default function(userToken,productCode){
 	console.log(userToken, productCode);
-	console.log("Update Cart Action running...")
+	// console.log("Update Cart Action running...")
 
 	const thePromise = axios({
 		method: "POST",
