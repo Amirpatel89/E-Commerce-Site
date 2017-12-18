@@ -16,7 +16,8 @@ function ProductRow(props){
 						onClick={()=>{
 							props.addToCart(props.token,product.productCode)
 						}}
-					>Add to Cart</button>
+					>Add to Cart
+				</button>
 	}
 
 

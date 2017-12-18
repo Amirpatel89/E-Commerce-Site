@@ -2,8 +2,46 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import GetCart from '../actions/GetCart';
+import { Link } from 'react-router-dom';
+import CartRow from '../components/CartRow';
+import axios from 'axios';
 
 class Cart extends Component{
+	constructor(){
+		super();
+		this.makePayment = this.makePayment.bind(this);
+	}
+
+	makePayment() {
+        var handler = window.StripeCheckout.configure({
+            key: 'pk_test_K9L17worNm0z7lHpdssTpwqr',
+            locale: 'auto',
+            image: 'http://www.digitalcrafts.com/sites/all/themes/digitalcrafts/images/digitalcrafts-site-logo.png',
+            token: (token) => {
+            	console.log(token);
+                var theData = {
+                    amount: this.props.cart.totalPrice * 100,
+                    stripeToken: token.id,
+                    userToken: this.props.auth.token,
+                }
+                axios({
+                    method: 'POST',
+                    url: `${window.apiHost}/stripe`,
+                    data: theData
+                }).then((data) => {
+                    console.log(data);
+                    if (data.msg === 'paymentSuccess') {
+
+                    }
+                });
+            }
+        });
+        handler.open({
+            name: "Pay Now",
+            description: 'Classic Models order',
+            amount: this.props.cart.totalPrice * 100 //the total is in pennies
+        })
+    }
 
 	componentDidMount(){
 		console.log(this.props.auth);
@@ -18,9 +56,38 @@ class Cart extends Component{
 
 	render(){
 		console.log(this.props.cart);
-		return(
-			<h1>Cart Page</h1>
-		)
+		if(!this.props.cart.totalItems){
+			// if this return occurs, the render is DONE
+			return(
+				<div>
+					<h3>Your cart is empty! Get shopping or <Link to="/login">login</Link></h3>
+				</div>
+			)
+		}else{
+			var cartArray = this.props.cart.products.map((product,index)=>{
+				console.log(product)
+				return (
+					<CartRow key={index} product={product} />
+				)
+			})
+			return(
+				<div>
+					<h2>Your order total is: ${this.props.cart.totalPrice} - <button className="btn btn-primary" onClick={this.makePayment}>Checkout!</button></h2>
+					<table className="table table-striped">
+						<thead>
+							<tr>
+								<th>Product</th>
+								<th>Price</th>
+								<th>Remove</th>
+							</tr>
+						</thead>
+						<tbody>
+							{cartArray}
+						</tbody>
+					</table>
+				</div>
+			)
+		}
 	}
 }
 

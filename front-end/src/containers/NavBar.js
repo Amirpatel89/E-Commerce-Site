@@ -29,6 +29,7 @@ class NavBar extends Component{
 		// console.log(this.props.auth);
 		if(this.props.auth.name !== undefined){
 			// the user is logged in
+			console.log('yay')
 			if(this.props.cart.totalPrice !== undefined){
 				// there is something in this user's cart.
 				const totalPrice = this.props.cart.totalPrice;
