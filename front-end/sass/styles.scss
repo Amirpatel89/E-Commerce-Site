@@ -2,3 +2,30 @@
 	margin-top: 100px;
 }
 @import 'navbar';
+
+
+body{
+	background-color: rgb(140, 191, 227)
+}
+
+img{
+	width: 1920px;
+	height: 1000px;
+}
+
+.logo{
+	height:70px;
+	width:70px;
+}
+.navbar-header{
+	color: red;
+	font-size: 48px;
+	font-family: "Courier New";
+}
+li{
+	font-size:18px;
+}
+.product-pic{
+	height:100px;
+	width:100px;
+}

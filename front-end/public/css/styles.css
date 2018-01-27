@@ -47,4 +47,27 @@
 .dropdown-links a:nth-child(7) {
   top: 155px; }
 
+body {
+  background-color: #8cbfe3; }
+
+img {
+  width: 1920px;
+  height: 1000px; }
+
+.logo {
+  height: 70px;
+  width: 70px; }
+
+.navbar-header {
+  color: red;
+  font-size: 48px;
+  font-family: "Courier New"; }
+
+li {
+  font-size: 18px; }
+
+.product-pic {
+  height: 100px;
+  width: 100px; }
+
 /*# sourceMappingURL=styles.css.map */

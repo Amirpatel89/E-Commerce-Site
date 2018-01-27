@@ -11,6 +11,8 @@ import Login from './containers/Login';
 import Logout from './containers/Logout';
 import ProductLines from './containers/ProductLines';
 import Cart from './containers/Cart';
+import About from './components/About';
+import Contact from './components/Contact';
 
 
 class App extends Component {
@@ -23,6 +25,8 @@ class App extends Component {
             <Route exact path="/" component={SlickSlider} />
             <div className="container">
               <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/contact" component={Contact} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path ="/shop/:productLine" component={ProductLines} />              

@@ -73,7 +73,7 @@ class ProductLines extends Component{
 								<th className="table-head">Description</th>
 								<th className="table-head">In Stock</th>
 								<th className="table-head">Your Price!</th>
-								<th className="table-head">MSRP</th>
+								<th className="table-head">Picture</th>
 							</tr>
 						</thead>
 						<tbody>

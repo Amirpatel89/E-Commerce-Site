@@ -40,7 +40,9 @@ function ProductRow(props){
 			<td>{product.productDescription}</td>
 			<td className={inStockClass}>{inStock}</td>
 			<td>{product.buyPrice}</td>
-			<td>{product.MSRP}</td>			
+			<td>
+				<img className="product-pic" src={product.picture}/>
+			</td>			
 			<td>{button}</td>
 		</tr>
 	)
