@@ -76,6 +76,9 @@ class NavBar extends Component{
 				    			<li><Link to="/about">About Us</Link></li>
 				    			<li><Link to="/contact">Contact Us</Link></li>
 				    		</ul>
+				    		<div className="nav navbar-nav cartbar pull-right">
+			    				{rightMenuBar}
+			    			</div>
 				    	</div>
 			    	</div>
 			    	<div className="container-fluid navbar-default">
@@ -83,9 +86,6 @@ class NavBar extends Component{
 			    			<div className="nav navbar-header">
 			    				<img class="logo" src="images/logo.jpg" alt=""/>
 			    				Stockpile Games
-			    			</div>
-			    			<div className="nav navbar-nav pull-right">
-			    				{rightMenuBar}
 			    			</div>
 			    		</div>
 			    	</div>
