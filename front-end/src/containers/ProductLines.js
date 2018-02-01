@@ -60,20 +60,20 @@ class ProductLines extends Component{
 		}
 
 		return(
-			<div>
+			<div className="product-page">
 				<h1>Welcome to the {this.props.match.params.productLine} page</h1>
-				<p>{desc}</p>
+				<p className="description">{desc}</p>
 				<div className="products">
 					<table className="table table-striped">
 						<thead>
 							<tr>
+								<th className="table-head"></th>
 								<th className="table-head">Product Name</th>
 								<th className="table-head"></th>
 								<th className="table-head">Console</th>
 								<th className="table-head">Comments</th>
 								<th className="table-head">In Stock</th>
 								<th className="table-head">Your Price!</th>
-								<th className="table-head">Picture</th>
 							</tr>
 						</thead>
 						<tbody>

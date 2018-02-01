@@ -33,16 +33,16 @@ function ProductRow(props){
 	}
 
 	return(
-		<tr>
+		<tr className="Product-Row">
+			<td>
+				<img className="product-pic" src={product.picture}/>
+			</td>	
 			<td>{product.productName}</td>
 			<td>{product.productScale}</td>
 			<td>{product.productVendor}</td>
-			<td>{product.productDescription}</td>
+			<td className="comments">{product.productDescription}</td>
 			<td className={inStockClass}>{inStock}</td>
 			<td>{product.buyPrice}</td>
-			<td>
-				<img className="product-pic" src={product.picture}/>
-			</td>			
 			<td>{button}</td>
 		</tr>
 	)

@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class Home extends Component{
 	render(){
 		return(
-			<div>
+			<div className="Home">
 				<h1>Welcome to Stockpile Games</h1>
-				<p1>Check out our low prices on Current-Gen and Retro Games.</p1> 
 			</div>
 		)
 	}

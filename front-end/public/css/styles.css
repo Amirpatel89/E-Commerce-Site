@@ -73,4 +73,55 @@ li {
 .cartbar {
   padding-top: 10px; }
 
+.Contact {
+  text-align: center;
+  font-size: 80px;
+  color: darkred; }
+  .Contact h1 {
+    font-size: 80px; }
+  .Contact h2 {
+    font-size: 26px; }
+  .Contact p1 {
+    font-size: 24px; }
+
+.Contact-Location {
+  color: darkred;
+  text-align: center; }
+
+.Product-Row {
+  font-size: 18px;
+  font-family: Lucida Console; }
+
+.products {
+  font-size: 16px; }
+
+.description {
+  font-size: 24px; }
+
+.comments {
+  font-style: italic; }
+
+.About h1 {
+  font-size: 40px;
+  text-align: center;
+  color: darkred; }
+.About p1 {
+  font-size: 30px;
+  text-align: center;
+  color: darkred; }
+
+.Home h1 {
+  font-size: 40px;
+  color: darkred;
+  text-align: center; }
+
+.product-page h1 {
+  font-size: 40px;
+  text-align: center;
+  color: darkred; }
+.product-page p {
+  font-size: 30px;
+  text-align: center;
+  color: darkred; }
+
 /*# sourceMappingURL=styles.css.map */
