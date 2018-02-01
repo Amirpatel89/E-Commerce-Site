@@ -124,4 +124,13 @@ li {
   text-align: center;
   color: darkred; }
 
+@media (max-width: 767px) {
+  overflow: hidden;
+  .nav li {
+    padding: none;
+    display: inline-block; }
+    .nav li a {
+      padding: none;
+      display: inline-block; } }
+
 /*# sourceMappingURL=styles.css.map */

@@ -61,11 +61,10 @@ class NavBar extends Component{
 		return(
 			<div id="navbar">
 				<nav className="navbar navbar-fixed-top">
-			  		<div className="container-fluid navbar-white">
-			  			<div className="container">
-				    		<ul className="nav navbar-nav">
-				    			<li><Link to="/">Home</Link></li>
-				    			<li className="dropdown">
+			  		<div className="container-fluid navbar-white col-xs-12">
+				    		<ul className="row nav navbar-nav col-xs-12">
+				    			<li className="col-xs-3"><Link to="/">Home</Link></li>
+				    			<li className="dropdown col-xs-3">
 				    				<Link to="/shop"><i className="arrow down" />Shop</Link>
 				    				<ul>
 				    					<li className="dropdown-links">
@@ -73,21 +72,18 @@ class NavBar extends Component{
 				    					</li>
 				    				</ul>
 				    			</li>
-				    			<li><Link to="/about">About Us</Link></li>
-				    			<li><Link to="/contact">Contact Us</Link></li>
+				    			<li classname="col-xs-3"><Link to="/about">About Us</Link></li>
+				    			<li classname="col-xs-3"><Link to="/contact">Contact</Link></li>
 				    		</ul>
-				    		<div className="nav navbar-nav cartbar pull-right">
+				    		<div className="row nav navbar-nav cartbar pull-right col-xs-12">
 			    				{rightMenuBar}
 			    			</div>
-				    	</div>
 			    	</div>
-			    	<div className="container-fluid navbar-default">
-			    		<div className="container">
+			    	<div className="container-fluid navbar-default col-xs-12">
 			    			<div className="nav navbar-header">
 			    				<img class="logo" src="images/logo.jpg" alt=""/>
 			    				Stockpile Games
 			    			</div>
-			    		</div>
 			    	</div>
 			    </nav>
 			</div>

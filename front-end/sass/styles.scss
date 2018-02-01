@@ -94,3 +94,16 @@ li{
 		color: darkred;
 	}
 }
+@media(max-width:767px){
+	overflow: hidden;
+	.nav{
+		li{
+		padding: none;	
+		display: inline-block;
+			a{
+				padding: none;
+				display: inline-block;
+			}
+		}
+	}
+}
