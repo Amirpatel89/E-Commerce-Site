@@ -71,12 +71,17 @@ li {
   width: 100px; }
 
 .cartbar {
-  padding-top: 10px; }
+  padding-top: 10px;
+  text-align: center; }
+  .cartbar li {
+    margin-top: 10px;
+    margin-left: 30px; }
 
 .Contact {
   text-align: center;
   font-size: 80px;
-  color: darkred; }
+  color: darkred;
+  margin-top: 100px; }
   .Contact h1 {
     font-size: 80px; }
   .Contact h2 {
@@ -101,14 +106,16 @@ li {
 .comments {
   font-style: italic; }
 
-.About h1 {
-  font-size: 40px;
-  text-align: center;
-  color: darkred; }
-.About p1 {
-  font-size: 30px;
-  text-align: center;
-  color: darkred; }
+.About {
+  margin-top: 100px; }
+  .About h1 {
+    font-size: 40px;
+    text-align: center;
+    color: darkred; }
+  .About p1 {
+    font-size: 30px;
+    text-align: center;
+    color: darkred; }
 
 .Home h1 {
   font-size: 40px;
@@ -126,12 +133,31 @@ li {
     text-align: center;
     color: darkred; }
 
-.About {
-  margin-top: 100px; }
+@media (max-width: 767px) {
+  .cartbar {
+    padding-top: 0px;
+    margin-top: 0px; }
+    .cartbar li {
+      margin-left: 0px; }
 
-.Contact {
-  margin-top: 50px; }
+  .About {
+    margin-top: 250px !important; }
 
+  .Contact {
+    margin-top: 250px !important; }
+    .Contact h1 {
+      font-size: 44px; }
+    .Contact p1 {
+      font-size: 20px; }
+
+  .Contact-Location h1 {
+    font-size: 40px; }
+
+  .product-page {
+    margin-top: 250px !important; }
+
+  .navbar-header {
+    text-align: center; } }
 .dropdown {
   z-index: 1;
   padding: 0px;

@@ -31,6 +31,11 @@ li{
 }
 .cartbar{
 	padding-top: 10px;
+	text-align: center;
+	li{
+		margin-top: 10px;
+		margin-left: 30px;
+	}
 }
 .Contact{
 	h1{
@@ -45,6 +50,7 @@ li{
 	text-align: center;
 	font-size: 80px;
 	color: darkred;
+	margin-top: 100px;
 }
 .Contact-Location{
 	color: darkred;
@@ -74,6 +80,7 @@ li{
 		text-align: center;
 		color: darkred;
 	}
+	margin-top: 100px;
 }
 .Home{
 	h1{
@@ -95,14 +102,37 @@ li{
 		color: darkred;
 	}
 }
-// @media(max-width:767px){
-
-// }
-.About{
-	margin-top: 100px;
-}
-.Contact{
-	margin-top: 50px;	
+@media(max-width:767px){
+	.cartbar{
+		padding-top: 0px;
+		margin-top: 0px;
+		li{
+			margin-left: 0px;
+		}
+	}
+	.About{
+		margin-top: 250px !important;
+	}
+	.Contact{
+		margin-top: 250px !important;
+		h1{
+			font-size: 44px;
+		}
+		p1{
+			font-size: 20px;
+		}
+	}
+	.Contact-Location{
+		h1{
+			font-size: 40px;
+		}
+	}
+	.product-page{
+		margin-top: 250px !important;
+	}
+	.navbar-header{
+		text-align: center;
+	}
 }
 .dropdown{
 	z-index: 1;

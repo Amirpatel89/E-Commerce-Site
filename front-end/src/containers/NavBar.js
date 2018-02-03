@@ -46,7 +46,7 @@ class NavBar extends Component{
 			]
 		}else{
 			rightMenuBar = [
-				<li key={0}><button className="btn btn-success" onClick={this.fakeLogin}>FAKE LOGIN</button></li>,
+				<li key={0}><button className="btn btn-primary" onClick={this.fakeLogin}>SAMPLE LOGIN</button></li>,
 			    <li key={1}><Link to="/login">Sign in</Link> or <Link to="/register">Create an account</Link></li>,
 			    <li key={2}>(0) items in cart | ($0.00)</li>
 			]
@@ -64,6 +64,8 @@ class NavBar extends Component{
 			  		<div className="container-fluid navbar-white">
 				    		<ul className="row nav navbar-nav col-xs-12 col-md-6">
 				    			<li className="col-xs-3"><Link to="/">Home</Link></li>
+				    			<li className="col-xs-3"><Link to="/about">About</Link></li>
+				    			<li className="col-xs-3"><Link to="/contact">Contact</Link></li>
 				    			<li className="dropdown col-xs-3">
 				    				<Link to="/shop"><i className="arrow down" />Shop</Link>
 				    				<ul>
@@ -72,8 +74,6 @@ class NavBar extends Component{
 				    					</li>
 				    				</ul>
 				    			</li>
-				    			<li className="col-xs-3"><Link to="/about">About Us</Link></li>
-				    			<li className="col-xs-3"><Link to="/contact">Contact</Link></li>
 				    		</ul>
 				    		<div className="row nav navbar-nav cartbar pull-right col-xs-12 col-md-6">
 			    				{rightMenuBar}
