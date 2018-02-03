@@ -83,6 +83,7 @@ li{
 	}
 }
 .product-page{
+	margin-top: 100px;
 	h1{
 		font-size: 40px;
 		text-align: center;
@@ -94,16 +95,17 @@ li{
 		color: darkred;
 	}
 }
-@media(max-width:767px){
-	overflow: hidden;
-	.nav{
-		li{
-		padding: none;	
-		display: inline-block;
-			a{
-				padding: none;
-				display: inline-block;
-			}
-		}
-	}
+// @media(max-width:767px){
+
+// }
+.About{
+	margin-top: 100px;
+}
+.Contact{
+	margin-top: 50px;	
+}
+.dropdown{
+	z-index: 1;
+	padding: 0px;
+	margin: 0px;
 }

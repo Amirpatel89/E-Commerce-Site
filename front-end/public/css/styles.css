@@ -115,22 +115,26 @@ li {
   color: darkred;
   text-align: center; }
 
-.product-page h1 {
-  font-size: 40px;
-  text-align: center;
-  color: darkred; }
-.product-page p {
-  font-size: 30px;
-  text-align: center;
-  color: darkred; }
+.product-page {
+  margin-top: 100px; }
+  .product-page h1 {
+    font-size: 40px;
+    text-align: center;
+    color: darkred; }
+  .product-page p {
+    font-size: 30px;
+    text-align: center;
+    color: darkred; }
 
-@media (max-width: 767px) {
-  overflow: hidden;
-  .nav li {
-    padding: none;
-    display: inline-block; }
-    .nav li a {
-      padding: none;
-      display: inline-block; } }
+.About {
+  margin-top: 100px; }
+
+.Contact {
+  margin-top: 50px; }
+
+.dropdown {
+  z-index: 1;
+  padding: 0px;
+  margin: 0px; }
 
 /*# sourceMappingURL=styles.css.map */
