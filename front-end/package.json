@@ -1,6 +1,7 @@
 
 {
-  "name": "ecommerce",
+  "homepage": "http://stockpilegames.amirpatel.net",
+  "name": "StockpileGames",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
