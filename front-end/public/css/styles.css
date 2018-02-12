@@ -52,10 +52,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
-img {
-  width: 1920px;
-  height: 1000px; }
-
 .logo {
   height: 70px;
   width: 70px; }
@@ -186,5 +182,9 @@ li {
     background-image: url("../images/nav-background-2.jpg"); }
   .navbar-white a:focus {
     background-image: url("../images/nav-background-2.jpg"); }
+
+.slick-image {
+  max-width: 100vw;
+  height: 550px !important; }
 
 /*# sourceMappingURL=styles.css.map */
