@@ -5,7 +5,11 @@
 
 
 body{
-	background-color: rgb(140, 191, 227)
+	// background-color: rgb(140, 191, 227)
+	background-image: url("../images/background.jpg");
+	// background-color: #cccccc;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 img{
@@ -18,8 +22,9 @@ img{
 	width:70px;
 }
 .navbar-header{
-	color: red;
-	font-size: 48px;
+	color: darkred;
+	// font-size: 48px;
+	font-size: 58px;
 	font-family: "Courier New";
 }
 li{
@@ -138,4 +143,35 @@ li{
 	z-index: 1;
 	padding: 0px;
 	margin: 0px;
+	ul{
+		a{
+			background-image: url('../images/nav-background.jpg');
+		}
+	}
+	li{
+		a{
+			background-image: url('../images/nav-background.jpg');
+		}
+	}
+	a{
+		background-image: url('../images/nav-background.jpg');
+	}
+}
+.navbar-default{
+	background-image: url('../images/nav-background.jpg');
+	border-top: 3px dotted #000;
+	border-bottom: 3px dotted #000;
+	box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+	margin-bottom: 1px;
+	border-color: red;
+}
+.navbar-white{
+	background-image: url('../images/nav-background.jpg');
+	a:hover{
+		background-image: url('../images/nav-background-2.jpg');
+	}
+	a:focus{
+		background-image: url('../images/nav-background-2.jpg');
+	}
+	color: darkred;
 }

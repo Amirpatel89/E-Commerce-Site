@@ -81,7 +81,7 @@ class NavBar extends Component{
 			    	</div>
 			    	<div className="container-fluid navbar-default col-xs-12">
 			    			<div className="nav navbar-header">
-			    				<img className="logo" src="images/logo.jpg" alt=""/>
+			    				<img className="logo" src="images/logo.png" alt=""/>
 			    				Stockpile Games
 			    			</div>
 			    	</div>

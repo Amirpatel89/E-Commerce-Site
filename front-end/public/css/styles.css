@@ -48,7 +48,9 @@
   top: 155px; }
 
 body {
-  background-color: #8cbfe3; }
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 img {
   width: 1920px;
@@ -59,8 +61,8 @@ img {
   width: 70px; }
 
 .navbar-header {
-  color: red;
-  font-size: 48px;
+  color: darkred;
+  font-size: 58px;
   font-family: "Courier New"; }
 
 li {
@@ -162,5 +164,27 @@ li {
   z-index: 1;
   padding: 0px;
   margin: 0px; }
+  .dropdown ul a {
+    background-image: url("../images/nav-background.jpg"); }
+  .dropdown li a {
+    background-image: url("../images/nav-background.jpg"); }
+  .dropdown a {
+    background-image: url("../images/nav-background.jpg"); }
+
+.navbar-default {
+  background-image: url("../images/nav-background.jpg");
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+  box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+  margin-bottom: 1px;
+  border-color: red; }
+
+.navbar-white {
+  background-image: url("../images/nav-background.jpg");
+  color: darkred; }
+  .navbar-white a:hover {
+    background-image: url("../images/nav-background-2.jpg"); }
+  .navbar-white a:focus {
+    background-image: url("../images/nav-background-2.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */
